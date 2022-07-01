@@ -1,0 +1,47 @@
+parameters:
+	ignoreErrors:
+		-
+			message: "#^Property Borzoni\\\\SBFile\\\\Components\\\\SBFile\\\\SBFile\\:\\:\\$fh \\(SplFileObject\\) in isset\\(\\) is not nullable\\.$#"
+			count: 1
+			path: src/Components/SBFile/SBFile.php
+
+		-
+			message: "#^Property Borzoni\\\\SBFile\\\\Components\\\\SBFile\\\\SBFile\\:\\:\\$fh \\(SplFileObject\\) on left side of \\?\\? is not nullable\\.$#"
+			count: 1
+			path: src/Components/SBFile/SBFile.php
+
+		-
+			message: "#^Parameter \\#3 \\$splFileObjectMock of static method Tests\\\\Helpers\\\\Unit\\\\Builders\\\\Components\\\\SBFile\\\\SBFileBuilder\\:\\:makeWithFakeCollaborator\\(\\) expects SplFileObject, Mockery\\\\LegacyMockInterface\\|string given\\.$#"
+			count: 1
+			path: tests/Unit/Components/SBFile/SBFileConstructorCollaboratorsUtTest.php
+
+		-
+			message: "#^Call to an undefined method Mockery\\\\ExpectationInterface\\|Mockery\\\\HigherOrderMessage\\:\\:once\\(\\)\\.$#"
+			count: 5
+			path: tests/Unit/Components/SBFile/SBFileReadCollaboratorsUtTest.php
+
+		-
+			message: "#^Cannot call method shouldReceive\\(\\) on Mockery\\\\LegacyMockInterface\\|string\\.$#"
+			count: 5
+			path: tests/Unit/Components/SBFile/SBFileReadCollaboratorsUtTest.php
+
+		-
+			message: "#^Parameter \\#3 \\$splFileObjectMock of static method Tests\\\\Helpers\\\\Unit\\\\Builders\\\\Components\\\\SBFile\\\\SBFileBuilder\\:\\:makeWithFakeCollaborator\\(\\) expects SplFileObject, Mockery\\\\LegacyMockInterface\\|string given\\.$#"
+			count: 3
+			path: tests/Unit/Components/SBFile/SBFileReadCollaboratorsUtTest.php
+
+		-
+			message: "#^Call to an undefined method Mockery\\\\ExpectationInterface\\|Mockery\\\\HigherOrderMessage\\:\\:once\\(\\)\\.$#"
+			count: 2
+			path: tests/Unit/Components/SBFile/SBFileWriteCollaboratorsUtTest.php
+
+		-
+			message: "#^Cannot call method shouldReceive\\(\\) on Mockery\\\\LegacyMockInterface\\|string\\.$#"
+			count: 2
+			path: tests/Unit/Components/SBFile/SBFileWriteCollaboratorsUtTest.php
+
+		-
+			message: "#^Parameter \\#3 \\$splFileObjectMock of static method Tests\\\\Helpers\\\\Unit\\\\Builders\\\\Components\\\\SBFile\\\\SBFileBuilder\\:\\:makeWithFakeCollaborator\\(\\) expects SplFileObject, Mockery\\\\LegacyMockInterface\\|string given\\.$#"
+			count: 2
+			path: tests/Unit/Components/SBFile/SBFileWriteCollaboratorsUtTest.php
+
