@@ -16,8 +16,8 @@ RUN apt-get install -y --no-install-recommends\
 RUN rm -rf /var/lib/apt/lists/*
 
 # xdebug
-RUN pecl install xdebug-3.1.5 \
-  docker-php-ext-enable xdebug
+RUN pecl install xdebug-3.1.5
+RUN docker-php-ext-enable xdebug
 
 # add local user
 RUN useradd -u 1000 -m local
