@@ -11,8 +11,6 @@ use Borzoni\SBFile\Components\SBFile\Exceptions\IOFileException;
 
 class SBFile implements FileInterface
 {
-
-
     /**
      * @var \SplFileObject
      */

@@ -1,12 +1,7 @@
 parameters:
 	ignoreErrors:
 		-
-			message: "#^Property Borzoni\\\\SBFile\\\\Components\\\\SBFile\\\\SBFile\\:\\:\\$fh \\(SplFileObject\\) in isset\\(\\) is not nullable\\.$#"
-			count: 1
-			path: src/Components/SBFile/SBFile.php
-
-		-
-			message: "#^Property Borzoni\\\\SBFile\\\\Components\\\\SBFile\\\\SBFile\\:\\:\\$fh \\(SplFileObject\\) on left side of \\?\\? is not nullable\\.$#"
+			message: "#^Strict comparison using \\=\\=\\= between int and false will always evaluate to false\\.$#"
 			count: 1
 			path: src/Components/SBFile/SBFile.php
 

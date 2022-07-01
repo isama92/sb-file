@@ -12,10 +12,12 @@ RUN apt-get install -y --no-install-recommends\
     ca-certificates curl git\
     libzip-dev zip zlib1g-dev unzip
 
+# cleanup
 RUN rm -rf /var/lib/apt/lists/*
 
-RUN pecl install xdebug-3.1.5
-RUN docker-php-ext-enable xdebug
+# xdebug
+RUN pecl install xdebug-3.1.5 \
+  docker-php-ext-enable xdebug
 
 # add local user
 RUN useradd -u 1000 -m local
