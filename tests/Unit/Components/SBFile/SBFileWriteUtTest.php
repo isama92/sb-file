@@ -21,8 +21,8 @@ class SBFileWriteUtTest extends SBFileUtTestCase
         $expectedContentLength = strlen($content);
 
         // Act
-        $SBFile = SBFileBuilder::makeWriteMode($filePath);
-        $contentLength = $SBFile->write($content);
+        $sbFile = SBFileBuilder::makeWriteMode($filePath);
+        $contentLength = $sbFile->write($content);
 
         // Assert
         $this->assertEquals($expectedContentLength, $contentLength);

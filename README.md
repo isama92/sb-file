@@ -6,13 +6,13 @@ Basic filesystem IO library.
 ```php
 use Borzoni\SBFile\Components\SBFile\SBFile;
 
-$SBFile = new SBFile('file.txt', SBFile::MODE_R);
-$content = $SBFile->read();
+$sbFile = new SBFile('file.txt', SBFile::MODE_R);
+$content = $sbFile->read();
 
 ---
 
-$SBFile = new SBFile('file.txt', SBFile::MODE_W);
-$bytes = $SBFile->write('abc');
+$sbFile = new SBFile('file.txt', SBFile::MODE_W);
+$bytes = $sbFile->write('abc');
 
 ---
 

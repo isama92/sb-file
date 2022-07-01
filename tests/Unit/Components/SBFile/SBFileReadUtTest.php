@@ -20,8 +20,8 @@ class SBFileReadUtTest extends SBFileUtTestCase
         $expectedContent = $this->getHappyContent();
 
         // Act
-        $SBFile = SBFileBuilder::makeReadMode($filePath);
-        $content = $SBFile->read();
+        $sbFile = SBFileBuilder::makeReadMode($filePath);
+        $content = $sbFile->read();
 
         // Assert
         $this->assertEquals($expectedContent, $content);

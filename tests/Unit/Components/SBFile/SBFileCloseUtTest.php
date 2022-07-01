@@ -19,10 +19,10 @@ class SBFileCloseUtTest extends SBFileUtTestCase
         $filePath = $this->getReadHappyPath();
 
         // Act
-        $SBFile = SBFileBuilder::makeReadMode($filePath);
-        $SBFile->close();
+        $sbFile = SBFileBuilder::makeReadMode($filePath);
+        $sbFile->close();
 
-        $fh = $SBFile->getHandler();
+        $fh = $sbFile->getHandler();
 
         // Assert
         $this->assertNull($fh);

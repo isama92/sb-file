@@ -22,10 +22,10 @@ class SBFileConstructorUtTest extends SBFileUtTestCase
         $filePath = $this->getReadHappyPath();
 
         // Act
-        $SBFile = SBFileBuilder::makeReadMode($filePath);
+        $sbFile = SBFileBuilder::makeReadMode($filePath);
 
         // Assert
-        $this->assertInstanceOf(SBFile::class, $SBFile);
+        $this->assertInstanceOf(SBFile::class, $sbFile);
     }
 
     /**

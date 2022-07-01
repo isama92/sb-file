@@ -19,8 +19,8 @@ class SBFileIsOpenUtTest extends SBFileUtTestCase
         $filePath = $this->getReadHappyPath();
 
         // Act
-        $SBFile = SBFileBuilder::makeReadMode($filePath);
-        $isOpen = $SBFile->isOpen();
+        $sbFile = SBFileBuilder::makeReadMode($filePath);
+        $isOpen = $sbFile->isOpen();
 
         // Assert
         $this->assertTrue($isOpen);
@@ -39,9 +39,9 @@ class SBFileIsOpenUtTest extends SBFileUtTestCase
         $filePath = $this->getReadHappyPath();
 
         // Act
-        $SBFile = SBFileBuilder::makeReadMode($filePath);
-        $SBFile->close();
-        $isOpen = $SBFile->isOpen();
+        $sbFile = SBFileBuilder::makeReadMode($filePath);
+        $sbFile->close();
+        $isOpen = $sbFile->isOpen();
 
         // Assert
         $this->assertFalse($isOpen);

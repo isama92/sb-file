@@ -36,8 +36,8 @@ class SBFileReadCollaboratorsUtTest extends SBFileMockeryTestCase
             ->andReturn($expectedContent);
 
         // Act
-        $SBFile = SBFileBuilder::makeWithFakeCollaborator($filePath, $mode, $mock);
-        $content = $SBFile->read();
+        $sbFile = SBFileBuilder::makeWithFakeCollaborator($filePath, $mode, $mock);
+        $content = $sbFile->read();
 
         // Assert
         $this->assertEquals($expectedContent, $content);
@@ -65,10 +65,10 @@ class SBFileReadCollaboratorsUtTest extends SBFileMockeryTestCase
             ->andReturn($expectedContentLength);
 
         // Act and Assert
-        $SBFile = SBFileBuilder::makeWithFakeCollaborator($filePath, $mode, $mock);
+        $sbFile = SBFileBuilder::makeWithFakeCollaborator($filePath, $mode, $mock);
 
         $this->expectException(IOFileException::class);
-        $SBFile->read();
+        $sbFile->read();
     }
 
     /**
@@ -98,9 +98,9 @@ class SBFileReadCollaboratorsUtTest extends SBFileMockeryTestCase
             ->andReturn($expectedContent);
 
         // Act and Assert
-        $SBFile = SBFileBuilder::makeWithFakeCollaborator($filePath, $mode, $mock);
+        $sbFile = SBFileBuilder::makeWithFakeCollaborator($filePath, $mode, $mock);
 
         $this->expectException(IOFileException::class);
-        $SBFile->read();
+        $sbFile->read();
     }
 }

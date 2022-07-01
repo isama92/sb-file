@@ -32,8 +32,8 @@ class SBFileWriteCollaboratorsUtTest extends SBFileMockeryTestCase
             ->andReturn($expectedContentLength);
 
         // Act
-        $SBFile = SBFileBuilder::makeWithFakeCollaborator($filePath, $mode, $mock);
-        $contentLength = $SBFile->write($content);
+        $sbFile = SBFileBuilder::makeWithFakeCollaborator($filePath, $mode, $mock);
+        $contentLength = $sbFile->write($content);
 
         // Assert
         $this->assertEquals($expectedContentLength, $contentLength);
@@ -62,8 +62,8 @@ class SBFileWriteCollaboratorsUtTest extends SBFileMockeryTestCase
             ->andReturn($expectedContentLength);
 
         // Act
-        $SBFile = SBFileBuilder::makeWithFakeCollaborator($filePath, $mode, $mock);
+        $sbFile = SBFileBuilder::makeWithFakeCollaborator($filePath, $mode, $mock);
         $this->expectException(IOFileException::class);
-        $SBFile->write($content);
+        $sbFile->write($content);
     }
 }

@@ -20,8 +20,8 @@ class SBFileGetHandlerUtTest extends SBFileUtTestCase
         $filePath = $this->getReadHappyPath();
 
         // Act
-        $SBFile = SBFileBuilder::makeReadMode($filePath);
-        $fh = $SBFile->getHandler();
+        $sbFile = SBFileBuilder::makeReadMode($filePath);
+        $fh = $sbFile->getHandler();
 
         // Assert
         $this->assertInstanceOf(SplFileObject::class, $fh);
@@ -40,9 +40,9 @@ class SBFileGetHandlerUtTest extends SBFileUtTestCase
         $filePath = $this->getReadHappyPath();
 
         // Act
-        $SBFile = SBFileBuilder::makeReadMode($filePath);
-        $SBFile->close();
-        $fh = $SBFile->getHandler();
+        $sbFile = SBFileBuilder::makeReadMode($filePath);
+        $sbFile->close();
+        $fh = $sbFile->getHandler();
 
         // Assert
         $this->assertEmpty($fh);
